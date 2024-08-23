@@ -1,0 +1,37 @@
+<main class="container">
+<h1 class="tittle"> Busca CEP</h1>
+<div class="form-container">
+    <form>
+<div class="form-group" [formGroup]="formCep" (ngSubmit)="onSubmitCepForm"> 
+        
+        <input type="" placeholder="CEP*" required>
+        <button  type="submit">Buscar</button>
+       
+    </div>
+ 
+        </form>
+        <input type="text"   placeholder="Nome*" required>
+        <input type="number" placeholder="CPF*" required>
+        <input type="text"   placeholder="E-mail*" required>
+        
+        <input type="number" placeholder="RG*" required>
+        <input type="number" placeholder="Celular 1*" required>
+        <input type="text" placeholder="Informe o endereço*" required>
+        <input type="number" placeholder="Celular 2" >
+        <input type="text" placeholder="informe um complemento">
+        <input type="number" placeholder="Telefone fixo">
+        <input type="number" placeholder="Número*" required>
+        <input type="number" placeholder="Bairro" required>
+        <input type="number" placeholder="Estado" required>
+        <input type="number" placeholder="Cidade" required>
+       
+</div>
+
+<div class="result">
+
+    <p>Rua: <span>{{ cep.Response.logradouro}}</span> </p>
+    <p>CEP: <span>R{{ cep.Response.cep}}</span> </p>
+    <p>Cidade: <span>{{ cep.Response.localidade}}</span> </p>
+    <p>Estado: <span>{{ cep.Response.uf}}</span> </p>
+</div>
+</main>
